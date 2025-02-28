@@ -48,7 +48,29 @@ def encrypt(file, key, mode, outfile):
 
 
 def decrypt(file, key, mode, outfile):
-    raise Exception('Not implemented')
+
+    logging.info('Encrypting...')
+
+    with open('aes-cipher.json', 'r') as fp:
+        ctJson = json.load(fp)
+    
+    with open('words.txt', 'r') as words:
+        lines = words.readlines()
+
+    iv = b64decode(ctJson['iv'])
+    ct = b64decode(ctJson['ciphertext'])
+    
+    with open('aes-plain.txt', 'w') as fout:
+        for line in lines:
+            try:
+                k = check_key(line)
+                cipher = AES.new(k, AES.MODE_CBC, iv)
+                pt = cipher.decrypt(ct)
+                str = b64encode(pt).decode('utf-8') + ": " + line + "\n"
+                fout.write(str)
+            except:
+                continue
+
 
 
 
