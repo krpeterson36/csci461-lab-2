@@ -51,24 +51,30 @@ def decrypt(file, key, mode, outfile):
 
     logging.info('Decrypting...')
 
-    with open('aes-cipher.json', 'r') as fp:
-        b64 = json.load(fp)
-    
-    with open('words.txt', 'r') as words:
-        lines = words.readlines()
+    if mode == "CBC":
+        with open(file, 'r') as fp:
+            b64 = json.load(fp)
+        
+        with open('words.txt', 'r') as words:
+            lines = words.readlines()
 
-    iv = b64decode(b64['iv'])
-    ct = b64decode(b64['ciphertext'])
-    
-    with open('aes-plain.txt', 'w') as fout:
-        for line in lines:
-            try:
-                k = check_key(line)
-                cipher = AES.new(k, AES.MODE_CBC, iv)
-                pt = unpad(cipher.decrypt(ct), AES.block_size)
-                print(pt, file=fout)
-            except:
-                continue
+        iv = b64decode(b64['iv'])
+        ct = b64decode(b64['ciphertext'])
+        
+        with open(outfile, 'w') as fout:
+            for line in lines:
+                length = len(line)
+                for i in range(length):
+                    for j in range(i,length):
+                        try:
+                            k = check_key(line[i:j])
+                            cipher = AES.new(k, AES.MODE_CBC, iv)
+                            pt = unpad(cipher.decrypt(ct), AES.block_size).decode("utf-8")
+                            print(line[i:j] + "\n" + pt, file=fout)
+                        except:
+                            continue
+    else:
+        raise Exception('Not implemented')
 
 
 
